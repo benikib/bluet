@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'BluetoothListPage.dart';
+
 class AnimationPage extends StatefulWidget {
   @override
   _AnimationPageState createState() => _AnimationPageState();
@@ -24,6 +26,15 @@ class _AnimationPageState extends State<AnimationPage>
     _animation = Tween<double>(begin: 0, end: 200).animate(_animationController)
       ..addListener(() {
         setState(() {});
+      })
+      ..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          // Navigue vers la page liste Bluetooth lorsque l'animation est terminée
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => BluetoothListPage()),
+          );
+        }
       });
 
     // Démarre l'animation en boucle
@@ -47,7 +58,7 @@ class _AnimationPageState extends State<AnimationPage>
         child: AnimatedBuilder(
           animation: _animation,
           builder: (context, child) {
-            return Container(git
+            return Container(
               width: _animation.value,
               height: _animation.value,
               color: Colors.blue,
@@ -58,3 +69,4 @@ class _AnimationPageState extends State<AnimationPage>
     );
   }
 }
+

@@ -21,7 +21,7 @@ class _BluetoothListPageState extends State<BluetoothListPage> {
       _devicesList = await bluetooth.getBondedDevices();
       setState(() {});
     } catch (exception) {
-      print('Error getting Bluetooth devices: $exception');
+      print('erreur de connexion: $exception');
     }
   }
 
@@ -36,12 +36,12 @@ class _BluetoothListPageState extends State<BluetoothListPage> {
         itemBuilder: (context, index) {
           final device = _devicesList[index];
           return ListTile(
-            title: Text(device.name ?? 'Unknown device'),
+            title: Text(device.name ?? 'appareil inconu'),
             subtitle: Text(device.address),
             trailing: IconButton(
               icon: const Icon(Icons.connect_without_contact),
               onPressed: () {
-                // Code pour se connecter à l'appareil Bluetooth
+
               },
             ),
           );

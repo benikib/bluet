@@ -1,16 +1,17 @@
 # bluet
 
-A new Flutter project.
+create new projet flutter name is Bluet .
 
-## Getting Started
+## create  class animantionPage for introdution page
+ 1.dependence: flutter_native_splash
+ 2. ![img.png](img.png)
+ 3. creer dossier images => logo.png
+4. navigation ![img_1.png](img_1.png)
 
-This project is a starting point for a Flutter application.
+### rediger dans la page List bluetooth 
+pourlister tout les appareils connecter
+    1. dependence : flutter_bluetooth_serial
 
-A few resources to get you started if this is your first Flutter project:
+    
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

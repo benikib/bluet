@@ -23,6 +23,8 @@ if (flutterVersionName == null) {
 }
 
 android {
+
+
     namespace "com.example.bluet"
     compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
@@ -46,6 +48,7 @@ android {
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion
+        targetSdkVersion="31"
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
